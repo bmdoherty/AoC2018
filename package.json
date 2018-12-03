@@ -8,18 +8,18 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bmdoherty/AoC.git"
+        "url": "git+https://github.com/bmdoherty/AoC2018.git"
     },
     "author": "bmdoherty",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/bmdoherty/AoC/issues"
+        "url": "https://github.com/bmdoherty/AoC2018/issues"
     },
-    "homepage": "https://github.com/bmdoherty/AoC#readme",
+    "homepage": "https://github.com/bmdoherty/AoC2018#readme",
     "devDependencies": {
-        "@babel/core": "^7.1.2",
-        "@babel/preset-env": "^7.0.0-beta.55",
-        "babel-eslint": "^9.0.0",
+        "@babel/core": "^7.2.0",
+        "@babel/preset-env": "^7.2.0",
+        "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.2",
         "babel-preset-env": "^1.7.0",
         "eslint": "^5.9.0",
@@ -29,7 +29,7 @@
         "eslint-plugin-react": "^7.11.1",
         "jest": "^23.4.2",
         "prettier": "^1.15.3",
-        "webpack": "^4.16.4"
+        "webpack": "^4.24.1"
     },
     "dependencies": {
         "@types/jest": "^23.3.10"
