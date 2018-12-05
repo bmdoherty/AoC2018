@@ -1,10 +1,10 @@
-const { f } = require("./3");
+const { f } = require("./5");
 const fs = require("fs");
 const { promisify } = require("util");
 const readFileAsync = promisify(fs.readFile);
 
 async function readfile() {
-    data1 = await readFileAsync("./3.1.data.txt", "utf8");
+    data1 = await readFileAsync("./5.1.data.txt", "utf8");
 }
 
 describe("Day 1", () => {
