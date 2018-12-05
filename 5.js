@@ -49,10 +49,10 @@ const f2 = (str) => {
         let polymer = removeLetter(str, aphabet[i]);
         let newPolymer = null;
 
-        while (polymer !== newPolymer) {
+        while (newPolymer != polymer) {
             newPolymer = react(polymer);
 
-            if (polymer !== newPolymer) {
+            if (newPolymer != polymer) {
                 polymer = newPolymer;
             }
         }
