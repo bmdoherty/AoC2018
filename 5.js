@@ -1,3 +1,5 @@
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
 const volitile = (a, b) => {
     if (a === undefined || b === undefined) {
         return false;
@@ -6,7 +8,27 @@ const volitile = (a, b) => {
     return a !== b && a.toUpperCase() === b.toUpperCase();
 };
 
+const regexGenerator = () => {
+    let regexArray = [];
+
+    for (let i = 0; i < alphabet.length; i++) {
+        let regex = new RegExp(`${alphabet[i]}${alphabet[i].toUpperCase()}`, "g");
+        regexArray.push(regex);
+
+        regex = new RegExp(`${alphabet[i].toUpperCase()}${alphabet[i]}`, "g");
+        regexArray.push(regex);
+    }
+
+    return regexArray;
+};
+
 const react = (polymer) => {
+    let regexArray = regexGenerator();
+
+    for (let regex of regexArray) {
+        polymer = polymer.replace(regex, "");
+    }
+
     for (let a = polymer.length - 1; a > 0; a--) {
         let b = a - 1;
         let moleculeA = polymer[a];
@@ -42,11 +64,10 @@ const f1 = (polymer) => {
 };
 
 const f2 = (str) => {
-    let aphabet = "abcdefghijklmnopqrstuvwxyz".split("");
     let min = Number.MAX_SAFE_INTEGER;
 
-    for (let i = 0; i < aphabet.length; i++) {
-        let polymer = removeLetter(str, aphabet[i]);
+    for (let i = 0; i < alphabet.length; i++) {
+        let polymer = removeLetter(str, alphabet[i]);
         let newPolymer = null;
 
         while (newPolymer != polymer) {
@@ -65,4 +86,4 @@ const f2 = (str) => {
     return min;
 };
 
-module.exports = { f1, f2 };
+module.exports = { f1, f2, react };

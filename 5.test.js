@@ -1,4 +1,4 @@
-const { f1, f2 } = require("./5");
+const { f1, f2, react } = require("./5");
 const fs = require("fs");
 const { promisify } = require("util");
 const readFileAsync = promisify(fs.readFile);
