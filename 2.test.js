@@ -7,7 +7,7 @@ async function readfile() {
     data1 = await readFileAsync("./2.1.data.txt", "utf8");
 }
 
-describe("Day 1", () => {
+describe("Day 2", () => {
     beforeAll(async () => {
         await readfile();
     });
